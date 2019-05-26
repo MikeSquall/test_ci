@@ -19,8 +19,8 @@ deploy:
     skip_cleanup: true
     script: bash scripts/publish.sh
     on:
-      repo: capsulajs/capsulahub
-      branch: develop
+      repo: MikeSquall/test_ci
+      branch: master
 
 notifications:
   email:
