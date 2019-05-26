@@ -12,7 +12,7 @@ install:
 
 script:
   - echo 'Started TravisCI scripts'
-  - 'if [ "$TRAVIS_BRANCH" != "develop" ]; then bash scripts/publish.sh; fi'
+  - 'if [ "$TRAVIS_BRANCH" != "master" ]; then bash scripts/publish.sh; fi'
 
 deploy:
   - provider: script
