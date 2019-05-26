@@ -1,0 +1,9 @@
+{
+  "name": "test_ci",
+  "version": "0.0.1",
+  "description": "A test repo which purpose is to test Travis publishing on npm",
+  "main": "index.js",
+  "author": "MikeSquall <arbib.michael@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
