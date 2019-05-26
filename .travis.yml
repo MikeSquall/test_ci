@@ -1,0 +1,27 @@
+sudo: true
+language: node_js
+node_js:
+  - '10'
+
+branches:
+  only:
+    - /.*/
+
+install:
+  - yarn install --production=false
+
+script:
+  - echo 'Started TravisCI scripts'
+  - 'if [ "$TRAVIS_BRANCH" != "develop" ]; then bash scripts/publish.sh; fi'
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: bash scripts/publish.sh
+    on:
+      repo: capsulajs/capsulahub
+      branch: develop
+
+notifications:
+  email:
+    on_failure: always
